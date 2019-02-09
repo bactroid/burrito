@@ -30,6 +30,7 @@ class Nothing:
     def bind(self, f):
         return Nothing()
 
+
 def MaybeReturn(x):
     return Just(x)
 
@@ -211,13 +212,15 @@ print(
 # usually written as:
 # return a >>= f == f a
 
-# So let's try to represent this in Python. Since return is a keyword in Python, let's call our function MaybeReturn
+# So let's try to represent this in Python. Since return is a keyword
+# in Python, let's call our function MaybeReturn.
 
 print(
     MaybeReturn(5)
 )  # Just(5)
 
 # Maybe we do a similar thing for Arrays/Lists...
+
 
 def ListReturn(x):
     return [x]
